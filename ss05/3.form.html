@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtFirstName">Please Enter Your Name</label> <br> 
+    <!-- label is like a header that is linked with an id through for -->
+    <input id = "txtFirstName"type="text">
+    <button id = "btnSubmit">Enter</button>
+
+    <p id = "demo"></p>
+    <script>
+        var btnSubmit = document.querySelector("#btnSubmit");
+        function displayName(){
+            var txtFirstName = document.querySelector("#txtFirstName")
+            alert(txtFirstName.value);
+        }
+        btnSubmit.addEventListener('click',displayName)
+    </script>
+</body>
+</html>

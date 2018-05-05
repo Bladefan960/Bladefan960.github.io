@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // object has property and method
+        var myCar = {
+            name: "Civic",
+            maker: "Honda",
+            color: "Red",
+            year: "2017",
+            howManyWheels: "1"
+        };
+
+        // Create a object called person that contains three properties
+        var person = {
+            firstName: "Edward",
+            lastName: "Jung",
+            arms: 2,
+            legs: 2,
+            age: 13,
+
+            getFullName: function(){
+                return this.firstName + this.lastName;
+            }
+        };
+
+        console.log(person.firstName,person.lastName,person.arms, person["legs"], person.age);
+        console.log(person["firstName"], person["lastName"],person["arms"], person["legs"], person["age"])
+        
+        
+
+
+    </script>
+</body>
+</html>

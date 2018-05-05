@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Number Guessing Game!</h1><br>
+    <p>We have selected a number between 1 and 10. 
+        If you get the answer correct, we'll say Congratulations! 
+
+        Otherwise we will give you instructions on how to get the number. Begin by entering a your name and a number.</p>
+    
+    <label for="userNumber">Enter a Number:</label>
+    <input id = "userNumber" type="text">
+    <button id = "btnSubmit">Enter</button><br>
+    <button id = "newGame">New Game</button>
+    <p id = "demo"></p>
+    <p id = "previous"></p>
+    <p id = "print"></p>
+    <script>
+        var rand = Math.floor(Math.random()*10+1);// random from 1 through 10
+        var count = 5;
+      
+        
+        function initiateRandom(){
+            rand = Math.floor(Math.random()*10+1);// random from 1 through 10
+        }
+        
+        function userRespond(){
+            var user = document.querySelector("#userNumber"); // Specify type with querySelecter
+            var prev = "";
+            if (parseInt(user.value) < rand){
+                document.querySelector("#demo").innerHTML = "Too Low";
+                prev += user.value;
+                document.querySelector("#previous").innerHTML = "Previous Guesses: " + prev;
+                count--;
+                document.getElementById("print").innerHTML = "Guesses Left: " + count;
+                if (count == 0){
+                    document.getElementById("print").innerHTML = "You lose, press new game for a new game.";
+                }
+                
+            }
+            else if (parseInt(user.value) > rand){
+                document.querySelector("#demo").innerHTML = "Too High";
+                prev += user.value;
+                document.querySelector("#previous").innerHTML = "Previous Guesses: " + prev;
+                count--;
+                document.getElementById("print").innerHTML = "Guesses Left: " + count;
+                if (count == 0){
+                    document.getElementById("print").innerHTML = "You lose, press new game for a new game.";
+                }
+            }
+            else{
+                document.querySelector("#demo").innerHTML = "Congratulations! You Won! Press New Game for a New Game.";
+            }
+            
+        }
+        var btnSubmit = document.querySelector("#btnSubmit");
+        btnSubmit.addEventListener('click',userRespond);
+        var newGame = document.querySelector("#newGame");
+        newGame.addEventListener('click',initiateRandom);
+        newGame.addEventListener('click',userRespond)
+    
+    </script>
+</body>
+</html>

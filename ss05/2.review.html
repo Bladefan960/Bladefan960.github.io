@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <button onclick= myFunction()>Click Me For Hello World</button>
+    <button onclick= anotherFunction()>Click Me for Bye World</button>
+    <button id = "btnMyButton">Click Me For Hello in a New Way!</button>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+        function anotherFunction(){
+            document.getElementById("demo").innerHTML = "Bye World";
+        }
+        var btn = document.querySelector("#btnMyButton");// # is id , . is class
+        btn.addEventListener('click',myFunction); // if you write myFunction(), it will execute function in there
+    </script>
+</body>
+</html>

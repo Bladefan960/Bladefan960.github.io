@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txtnumber">Enter a Number:</label>
+    <input id = "txtnumber"type="text"><br><br>
+    <label for="txtnumber2">Enter Second Number:</label>
+    <input id = "txtnumber2"type="text"><br>
+    <button id = "btnSubmit">Enter</button>
+    <p id = "demo"></p>
+    <script>
+        var btnSumbmit = document.querySelector("#btnSumbmit");
+        function printSum(){
+            var firstNum = document.querySelector("#txtnumber");
+            var secondNum = document.querySelector("#txtnumber2");
+            var sum = parseInt(firstNum.value) + parseInt(secondNum.value);
+            document.getElementById("demo").innerHTML = "Sum is " + sum;
+        }
+        btnSubmit.addEventListener('click',printSum);
+    </script>
+    
+</body>
+</html>

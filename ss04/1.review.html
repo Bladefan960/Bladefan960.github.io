@@ -8,14 +8,39 @@
 </head>
 <body>
     <p id = "demo"></p>
-    <button onclick="document.getElementById('demo').innerHTML = 'Hello'">
+    <button onclick="sayhello()">
         Say Hello
+    </button>
+
+    <button onclick="addOne()">
+        Count Up
+    </button>
+    <button onclick="subOne()">
+        Count Down
+    </button>
+    <button onclick="Make0()">
+            MakeZero
     </button>
 
     <script>
         
         document.getElementById('demo').innerHTML = "Paragraph Changed";
-
+        function sayhello(){
+            document.getElementById('demo').innerHTML = "Hello";
+        }
+        var count = 0;
+        function addOne(){
+            count++;
+            document.getElementById('demo').innerHTML = "Count:" +count;
+        }
+        function subOne(){
+            count--;
+            document.getElementById('demo').innerHTML = "Count:" + count;
+        }
+        function Make0(){
+            count = 0;
+            document.getElementById('demo').innerHTML = "Count:" + count;
+        }
     </script>
 </body>
 </html>
