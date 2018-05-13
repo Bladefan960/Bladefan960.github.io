@@ -40,7 +40,7 @@ var RectComponent = /** @class */ (function () {
             this.dx *= -1;
         }
         this.x += this.dx;
-        if (this.y > 1000 || this.y < 0) {
+        if (this.y > 900 || this.y < 1) {
             this.dx *= 1;
         }
         this.y += this.dx;
