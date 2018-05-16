@@ -27,6 +27,9 @@ var game2;
             this.dx = dx;
         }
         RectComponent.prototype.update = function () {
+            if (this.x < 0 || this.x > 990) {
+                this.dx *= -1;
+            }
             this.x += this.dx;
         };
         RectComponent.prototype.draw = function (ctx) {
