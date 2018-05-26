@@ -14,13 +14,17 @@ namespace game092{
             this.start = this.start.bind(this);
             this.handleKeyDown = this.handleKeyDown.bind(this);
             this.stop = this.stop.bind(this);
+
             window.addEventListener('keydown',this.handleKeyDown);
+        
             document.querySelector("#btnStart").addEventListener('click',this.start);
             document.querySelector("#btnStop").addEventListener('click' ,this.stop);
         }
         public handleKeyDown(ev: KeyboardEvent){
             this.keyCode = ev.keyCode;
         }
+    
+
         public start(){
             if (this.isStarted){
                 return;
@@ -35,7 +39,7 @@ namespace game092{
             }
             this.isStarted = false;
             window.clearInterval(this.gameloop);
-           
+
         }
         public update(){
             this.ctx.clearRect(0,0,this.board.width,this.board.height);
@@ -56,43 +60,35 @@ namespace game092{
          }
          public update(keyCode:number){
              if (keyCode == 37){
-                if (this.x < 0){
-                    this.dx = 1;
-                    this.dy = 0;
-                    
-                }
-                else{
-                    this.dx = -1;
-                    this.dy = 0;
-                }
+                this.dx = -1;
+                this.dy = 0;
              }
              else if (keyCode == 38){
                 this.dx = 0;
                 this.dy = -1;
              }
              else if (keyCode == 39){
-                if (this.x > 990){
-                    this.dx = -1;
-                    this.dy = 0;
-                    
-                }
-                else{
-                    this.dx = 1;
-                    this.dy = 0;
-                }
-                
+                this.dx = 1;
+                this.dy = 0;
              }
              else if (keyCode == 40){
                  this.dx = 0;
                  this.dy = 1;
              }
-            
+             else {
+                 this.dx = 0;
+                 this.dy = 0;
+             }
+             if (this.x < 0 || this.x > 900){
+                this.dx *=-1;
+                this.dy *= 1;
+             }
             this.x += this.dx;
             if (this.y < 0 || this.y > 900){
                this.dy *=-1;
                this.dx *= 1;
             }
-             this.x += this.dx;
+          
              this.y += this.dy;
          }
          

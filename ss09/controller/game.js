@@ -55,42 +55,38 @@ var game092;
         };
         RectPlayer.prototype.update = function (keyCode) {
             if (keyCode == 37) {
-                if (this.x < 0) {
-                    this.dx = 1;
-                    this.dy = 0;
-                }
-                else {
-                    this.dx = -1;
-                    this.dy = 0;
-                }
+                this.dx = -1;
+                this.dy = 0;
             }
             else if (keyCode == 38) {
                 this.dx = 0;
                 this.dy = -1;
             }
             else if (keyCode == 39) {
-                if (this.x > 990) {
-                    this.dx = -1;
-                    this.dy = 0;
-                }
-                else {
-                    this.dx = 1;
-                    this.dy = 0;
-                }
+                this.dx = 1;
+                this.dy = 0;
             }
             else if (keyCode == 40) {
                 this.dx = 0;
                 this.dy = 1;
+            }
+            else {
+                this.dx = 0;
+                this.dy = 0;
+            }
+            if (this.x < 0 || this.x > 900) {
+                this.dx *= -1;
+                this.dy *= 1;
             }
             this.x += this.dx;
             if (this.y < 0 || this.y > 900) {
                 this.dy *= -1;
                 this.dx *= 1;
             }
-            this.x += this.dx;
             this.y += this.dy;
         };
         return RectPlayer;
     }());
     var game = new Game();
 })(game092 || (game092 = {}));
+//# sourceMappingURL=game.js.map

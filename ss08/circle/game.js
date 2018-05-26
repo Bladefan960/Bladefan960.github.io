@@ -53,3 +53,4 @@ var circlegame;
     var game = new MyGame();
     game.start();
 })(circlegame || (circlegame = {}));
+//# sourceMappingURL=game.js.map

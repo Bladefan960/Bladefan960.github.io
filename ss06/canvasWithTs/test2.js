@@ -27,3 +27,4 @@ sunglassesImage.src = "sunglassesEmoji.png";
 sunglassesImage.onload = function () {
     ctx.drawImage(sunglassesImage, 0, 1);
 };
+//# sourceMappingURL=test2.js.map

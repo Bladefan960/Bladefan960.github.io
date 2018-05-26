@@ -21,3 +21,4 @@ function update() {
     }
     ctx.fillRect(x, 100, 20, 20);
 }
+//# sourceMappingURL=game.js.map

@@ -53,3 +53,4 @@ var RectComponent = /** @class */ (function () {
 }());
 var game = new MyGame();
 game.start();
+//# sourceMappingURL=game.js.map

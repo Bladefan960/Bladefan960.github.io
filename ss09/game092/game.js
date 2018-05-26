@@ -1,5 +1,5 @@
-var game2;
-(function (game2) {
+var game092;
+(function (game092) {
     var MyGame = /** @class */ (function () {
         function MyGame() {
             this.board = document.querySelector("#board");
@@ -7,7 +7,7 @@ var game2;
         }
         MyGame.prototype.start = function () {
             var _this = this;
-            this.player = new RectComponent(100, 100, 10, 10, "blue", 3);
+            this.player = new RectComponent(100, 100, 100, 100, "red", 3);
             window.setInterval(function () { _this.update(); }, 20);
         };
         MyGame.prototype.update = function () {
@@ -27,7 +27,7 @@ var game2;
             this.dx = dx;
         }
         RectComponent.prototype.update = function () {
-            if (this.x < 0 || this.x > 990) {
+            if (this.x < 0 || this.x > 900) {
                 this.dx *= -1;
             }
             this.x += this.dx;
@@ -38,7 +38,7 @@ var game2;
         };
         return RectComponent;
     }());
-    var game = new MyGame();
-    game.start();
-})(game2 || (game2 = {}));
+    var myGame = new MyGame();
+    myGame.start();
+})(game092 || (game092 = {}));
 //# sourceMappingURL=game.js.map
