@@ -5,7 +5,7 @@ namespace game093{
         public player:RectPlayer;
         public isStarted: boolean;
         public keyCode: number;
-        public gameloop: number;
+        public gameloop: any;
         
         constructor(){
             this.isStarted = false;
@@ -13,9 +13,11 @@ namespace game093{
             this.start = this.start.bind(this);
             this.stop = this.stop.bind(this);
             this.handleKeyDown = this.handleKeyDown.bind(this);
+            
 
-            var start = document.addEventListener('click',this.start);
-            var stop = document.addEventListener('click',this.stop);
+            document.querySelector("#btnStart").addEventListener('click',this.start);
+            document.querySelector("#btnStop").addEventListener('click',this.stop);
+            window.addEventListener('keydown',this.handleKeyDown);
 
             this.board = document.querySelector("#board");
             this.ctx = board.getContext("2d");
@@ -28,8 +30,8 @@ namespace game093{
                 return;
             }
             this.isStarted = true;
-            this.player = new RectPlayer(10,10,100,100,"red",3);
-            this.gameloop = window.setInterval(this.gameloop,20);
+            this.player = new RectPlayer(10,10,100,100,"red",3,3);
+            this.gameloop = window.setInterval(() => {this.update();},20);
         }
         public stop(){
             if (this.isStarted == false){
@@ -40,7 +42,7 @@ namespace game093{
         }
         public update(){
             this.ctx.clearRect(0,0,1000,1000);
-            this.player.update();
+            this.player.update(this.keyCode);
             this.player.draw(this.ctx);
         }
         
@@ -51,14 +53,42 @@ namespace game093{
                     public w: number,
                     public h:number,
                     public color: string,
-                    public dx: number){
+                    public dx: number,
+                    public dy: number){
 
         }
-        public update(){
-            if (this.x < 0 || this.x > 900){
-                this.dx *= -1;
-            }
+        public update(keyCode:number){
+            if (keyCode == 37){
+                this.dx = -1;
+                this.dy = 0;
+             }
+             else if (keyCode == 38){
+                this.dx = 0;
+                this.dy = -1;
+             }
+             else if (keyCode == 39){
+                this.dx = 1;
+                this.dy = 0;
+             }
+             else if (keyCode == 40){
+                 this.dx = 0;
+                 this.dy = 1;
+             }
+             else {
+                 this.dx = 0;
+                 this.dy = 0;
+             }
+             if (this.x < 0 || this.x > 900){
+                this.dx *=-1;
+                this.dy *= 1;
+             }
             this.x += this.dx;
+            if (this.y < 0 || this.y > 900){
+               this.dy *=-1;
+               this.dx *= 1;
+            }
+          
+             this.y += this.dy;
         }
         public draw(ctx:CanvasRenderingContext2D){
             ctx.fillStyle = this.color;
