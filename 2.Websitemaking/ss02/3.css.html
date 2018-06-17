@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Session2: CSS</title>
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
     <style>
         body{
             background-color: powderblue;
@@ -12,21 +14,43 @@
         h1{
             color:blue;
             font-size: 300%;
-            font-family: Verdana;
-            border: 10px dotted blue;
+            font-family: Shrikhand;
+            padding: 10px;
+            border: 10px double blue;
         }
         p{
             color:green;
             font-size: 200%;
             font-family: Times New Roman;
+            background-color: white;
+
+            padding:20px;
             border: 1px solid green;
+            margin:20px;
+        }
+        p#secondP{
+            color: darkblue;
+            border:5px solid;
+        }
+        p#thirdP{
+            color: darkorange;
+            border: 10px solid;
+        }
+        p.error{
+            border: 2px dashed red;
+            background-color: gold;
+            color: red;
         }
     </style>
 </head>
 <body>
     <h1>This is a heading</h1>
     <p>This is a paragraph</p>
-    <p>This is a second paragraph.</p>
+    <p id ="secondP">This is a second paragraph.</p>
+    <p id = "thirdP">This is third paragraph</p>
+   
+    <p class ="error">Error 1</p>
+    <p class ="error">Error 2</p>
 
 </body>
 </html>
