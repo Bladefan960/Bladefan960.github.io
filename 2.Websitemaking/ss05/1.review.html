@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <h1 id="display"></h1>
+        <button class="btn btn-primary" onclick="alert('Hello')">Click me</button>
+        <button class="btn btn-warning" onclick="showalert()">Click me 2</button>
+        <button class="btn btn-warning" onclick="showOnDisplay()">Click me 3</button>
+    </div>
+
+    <script>
+        function showalert(){
+            alert('Oh Yeah');
+        }
+        function showOnDisplay(){
+            document.querySelector("#display").innerHTML = "Edward";
+        }
+    </script>
+</body>
+</html>
