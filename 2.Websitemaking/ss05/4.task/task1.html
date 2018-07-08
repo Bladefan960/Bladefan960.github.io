@@ -23,14 +23,18 @@
 <body>
 <div class="container">
     <h1>Welcome</h1>
-    <h1 id="display"></h1>
-    <button id="btnCountUp"class="btn btn-primary">Count Up</button>
-    <button id="btnCountDown"class="btn btn-danger">Count Down</button>
+    <div class="container">
+        <h1>Tasks</h1>
+        <ul id="ulTasks"></ul>
+        <form action="." id = "frmTask">
+            <!-- Required means content have to be required -->
+            <input type="text" id="txtTask" required> 
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
-    <script src="2.count.js">
-       
-    </script>
 </div>
+<script src="task1.js"></script>
 </body>
 
 </html>

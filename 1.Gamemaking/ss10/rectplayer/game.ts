@@ -176,7 +176,7 @@ namespace game091{
             this.x -= this.dx;
             if (this.x + this.w < 0){
                 this.x = 950;
-                this.draw();
+                // this.draw();
             }
         }
 
