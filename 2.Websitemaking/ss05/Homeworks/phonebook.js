@@ -1,0 +1,46 @@
+var homeworkTask;
+(function (homeworkTask) {
+    var tblContact = document.querySelector("#tblContact");
+    var frmContact = document.querySelector("#frmContact");
+    var txtFirstName = document.querySelector("#txtFirstName");
+    var txtLastName = document.querySelector("#txtLastName");
+    var txtEmail = document.querySelector("#txtEmail");
+    var txtPhone = document.querySelector("#txtPhone");
+    var txtAddress = document.querySelector("#txtAddress");
+    var txtState = document.querySelector("#txtState");
+    frmContact.onsubmit = function () {
+        var firstName = txtFirstName.value;
+        var lastName = txtLastName.value;
+        var email = txtEmail.value;
+        var phone = txtPhone.value;
+        var address = txtAddress.value;
+        var state = txtState.value;
+        var row = tblContact.insertRow();
+        var cell = row.insertCell();
+        cell.innerHTML = firstName;
+        cell = row.insertCell();
+        cell.innerHTML = lastName;
+        cell = row.insertCell();
+        cell.innerHTML = email;
+        cell = row.insertCell();
+        cell.innerHTML = phone;
+        cell = row.insertCell();
+        cell.innerHTML = address;
+        cell = row.insertCell();
+        cell.innerHTML = state;
+        firstName = "";
+        lastName = "";
+        email = "";
+        phone = "";
+        address = "";
+        state = "";
+        txtFirstName.focus();
+        txtLastName.focus();
+        txtEmail.focus();
+        txtPhone.focus();
+        txtAddress.focus();
+        txtState.focus();
+        return false;
+    };
+})(homeworkTask || (homeworkTask = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGhvbmVib29rLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsicGhvbmVib29rLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLElBQVUsWUFBWSxDQWlEckI7QUFqREQsV0FBVSxZQUFZO0lBQ2xCLElBQUksVUFBVSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsYUFBYSxDQUFxQixDQUFDO0lBQzNFLElBQUksVUFBVSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsYUFBYSxDQUFvQixDQUFDO0lBQzFFLElBQUksWUFBWSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsZUFBZSxDQUFxQixDQUFDO0lBQy9FLElBQUksV0FBVyxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsY0FBYyxDQUFxQixDQUFDO0lBQzdFLElBQUksUUFBUSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsV0FBVyxDQUFxQixDQUFDO0lBQ3ZFLElBQUksUUFBUSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsV0FBVyxDQUFxQixDQUFDO0lBQ3ZFLElBQUksVUFBVSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsYUFBYSxDQUFxQixDQUFDO0lBQzNFLElBQUksUUFBUSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsV0FBVyxDQUFxQixDQUFDO0lBSXZFLFVBQVUsQ0FBQyxRQUFRLEdBQUc7UUFDbEIsSUFBSSxTQUFTLEdBQUcsWUFBWSxDQUFDLEtBQUssQ0FBQztRQUNuQyxJQUFJLFFBQVEsR0FBRyxXQUFXLENBQUMsS0FBSyxDQUFDO1FBQ2pDLElBQUksS0FBSyxHQUFHLFFBQVEsQ0FBQyxLQUFLLENBQUM7UUFDM0IsSUFBSSxLQUFLLEdBQUcsUUFBUSxDQUFDLEtBQUssQ0FBQztRQUMzQixJQUFJLE9BQU8sR0FBRyxVQUFVLENBQUMsS0FBSyxDQUFDO1FBQy9CLElBQUksS0FBSyxHQUFHLFFBQVEsQ0FBQyxLQUFLLENBQUM7UUFFM0IsSUFBSSxHQUFHLEdBQUcsVUFBVSxDQUFDLFNBQVMsRUFBRSxDQUFBO1FBQ2hDLElBQUksSUFBSSxHQUFHLEdBQUcsQ0FBQyxVQUFVLEVBQUUsQ0FBQztRQUM1QixJQUFJLENBQUMsU0FBUyxHQUFHLFNBQVMsQ0FBQztRQUMzQixJQUFJLEdBQUcsR0FBRyxDQUFDLFVBQVUsRUFBRSxDQUFDO1FBQ3hCLElBQUksQ0FBQyxTQUFTLEdBQUcsUUFBUSxDQUFDO1FBQzFCLElBQUksR0FBRyxHQUFHLENBQUMsVUFBVSxFQUFFLENBQUM7UUFDeEIsSUFBSSxDQUFDLFNBQVMsR0FBRyxLQUFLLENBQUM7UUFDdkIsSUFBSSxHQUFHLEdBQUcsQ0FBQyxVQUFVLEVBQUUsQ0FBQztRQUN4QixJQUFJLENBQUMsU0FBUyxHQUFHLEtBQUssQ0FBQztRQUN2QixJQUFJLEdBQUcsR0FBRyxDQUFDLFVBQVUsRUFBRSxDQUFDO1FBQ3hCLElBQUksQ0FBQyxTQUFTLEdBQUcsT0FBTyxDQUFDO1FBQ3pCLElBQUksR0FBRyxHQUFHLENBQUMsVUFBVSxFQUFFLENBQUM7UUFDeEIsSUFBSSxDQUFDLFNBQVMsR0FBRyxLQUFLLENBQUM7UUFFdkIsU0FBUyxHQUFHLEVBQUUsQ0FBQztRQUNmLFFBQVEsR0FBRyxFQUFFLENBQUM7UUFDZCxLQUFLLEdBQUcsRUFBRSxDQUFDO1FBQ1gsS0FBSyxHQUFHLEVBQUUsQ0FBQztRQUNYLE9BQU8sR0FBRyxFQUFFLENBQUM7UUFDYixLQUFLLEdBQUcsRUFBRSxDQUFDO1FBRVgsWUFBWSxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQ3JCLFdBQVcsQ0FBQyxLQUFLLEVBQUUsQ0FBQztRQUNwQixRQUFRLENBQUMsS0FBSyxFQUFFLENBQUM7UUFDakIsUUFBUSxDQUFDLEtBQUssRUFBRSxDQUFDO1FBQ2pCLFVBQVUsQ0FBQyxLQUFLLEVBQUUsQ0FBQztRQUNuQixRQUFRLENBQUMsS0FBSyxFQUFFLENBQUM7UUFDakIsT0FBTyxLQUFLLENBQUM7SUFDakIsQ0FBQyxDQUFBO0FBQ0wsQ0FBQyxFQWpEUyxZQUFZLEtBQVosWUFBWSxRQWlEckIifQ==

@@ -17,27 +17,19 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <title>Document</title>
-
+    <style>
+        canvas{
+            background: #eee;
+        }
+    </style>
 </head>
 
 <body>
-
-    
-    <div class="container">
-        <h1>Tasks</h1>
-        <ul id="ulTasks">
-            <li>something</li>
-        </ul>
-        <form action="." id = "frmTask">
-            <!-- Required means content have to be required -->
-            <input type="text" id="txtTask" required> 
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    
-
-
-<script src="task1.js"></script>
+<div class="container">
+    <h1>Canvas</h1>
+    <canvas id="board" width="800" height="600"></canvas> 
+</div>
+<script src="1.canvas.js"></script>
 </body>
 
 </html>
