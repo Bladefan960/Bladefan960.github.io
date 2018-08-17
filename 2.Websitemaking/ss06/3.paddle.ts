@@ -78,10 +78,10 @@ namespace moving{
         ballY += balldy;
         
         if (leftPressed == true){
-            paddleX -= 12;
+            paddleX -= 16;
         }
         if (rightPressed == true){
-            paddleX += 12;
+            paddleX += 16;
         }
     }
 
